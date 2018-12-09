@@ -1,0 +1,69 @@
+{
+  "_from": "cordova-sqlite-storage@2.3.0",
+  "_id": "cordova-sqlite-storage@2.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-E6IYvZHUALVGJ3cSsThCpW0sI7JLdv9d2bG/UNZr5+DP5cSlxSTURao0jP6aQmIGAPPLh4xy/j4ImPuEoWtj0A==",
+  "_location": "/cordova-sqlite-storage",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-sqlite-storage@2.3.0",
+    "name": "cordova-sqlite-storage",
+    "escapedName": "cordova-sqlite-storage",
+    "rawSpec": "2.3.0",
+    "saveSpec": null,
+    "fetchSpec": "2.3.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-sqlite-storage/-/cordova-sqlite-storage-2.3.0.tgz",
+  "_shasum": "9eb96aab0162fa073f87ec126a145bb6aef79b50",
+  "_spec": "cordova-sqlite-storage@2.3.0",
+  "_where": "C:\\Users\\mweyn\\git\\acc_ble\\acc_viz",
+  "author": {
+    "name": "various"
+  },
+  "bugs": {
+    "url": "https://github.com/litehelpers/Cordova-sqlite-storage/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-sqlite-storage",
+    "platforms": [
+      "android",
+      "ios",
+      "osx",
+      "windows"
+    ]
+  },
+  "dependencies": {
+    "cordova-sqlite-storage-dependencies": "1.2.0"
+  },
+  "deprecated": false,
+  "description": "Native interface to SQLite for PhoneGap/Cordova",
+  "devDependencies": {
+    "shelljs": "^0.7.4"
+  },
+  "homepage": "https://github.com/litehelpers/Cordova-sqlite-storage",
+  "keywords": [
+    "sqlite",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-osx",
+    "cordova-windows"
+  ],
+  "license": "MIT",
+  "name": "cordova-sqlite-storage",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litehelpers/Cordova-sqlite-storage.git"
+  },
+  "scripts": {
+    "start": "node scripts/prepareSpec.js"
+  },
+  "version": "2.3.0"
+}

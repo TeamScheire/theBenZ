@@ -1,0 +1,14 @@
+.center {
+    text-align: center;
+    margin: auto;
+}
+#deviceList li .deviceName {
+    font-weight: bold;
+}
+#deviceList li .deviceId, #deviceList li .deviceRssi {
+    font-size: smaller;
+}
+.timestamp {
+    font-size: smaller;
+    margin-top: 5px;
+}

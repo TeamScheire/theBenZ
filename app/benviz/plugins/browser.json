@@ -1,0 +1,25 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-ble-central": {
+      "PACKAGE_NAME": "be.uantwerpen.benviz"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "be.uantwerpen.benviz"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "be.uantwerpen.benviz"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "be.uantwerpen.benviz"
+    }
+  }
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="lib/OnsenUI/css/onsenui.css">
+        <link rel="stylesheet" type="text/css" href="lib/OnsenUI/css/onsen-css-components.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+
+        <title>TheBenZ</title>
+    </head>
+    <body>
+        <ons-page id="home"  style="height:100vh">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button id="button_home" icon="md-home"></ons-toolbar-button>
+                    <ons-toolbar-button id="button_ble" icon="fa-bluetooth"></ons-toolbar-button>
+                </div>            
+                <div class="center" id="overview"></div>            
+                <div class="right">
+                    <ons-toolbar-button id="button_debug" icon="md-face"></ons-toolbar-button>
+                    <ons-toolbar-button id="button_logs" icon="md-menu"></ons-toolbar-button>
+                    <ons-toolbar-button id="button_settings" icon="md-settings"></ons-toolbar-button>
+                </div>
+            </ons-toolbar>
+
+            <ons-card id="contentcard">                      
+                <div id="plotcurrent_container"></div>  
+                <div id="plottotal_container"></div>  
+                <div id="plotdaily_container"></div>  
+                <div ></div>  
+            </ons-card>
+
+            <ons-card id="debugcard"style="display: none;">                      
+                <ons-list>
+                    <ons-list-item><ons-button id="button-simulate">Add simulated data</ons-button></ons-list-item>
+                    <ons-list-item><ons-button id="button-cleartoday">Clear todays data</ons-button></ons-list-item>
+                    <ons-list-item><ons-button id="button-clearall">Clear all data</ons-button></ons-list-item>
+                    <ons-list-item><ons-button id="button-clearhistoric">Clear all history</ons-button></ons-list-item>
+                </ons-list>
+            </ons-card>
+
+            <ons-card id="blecard" style="display: none;"> 
+                <div class="title">TheBenZ Device</div>    
+                <div class="ble-not-connected" >
+                    <ons-list id="ble-devices">
+                        <ons-list-item class="general">
+                            <ons-button id="refreshDeviceList">Refresh device list</ons-button>
+                        </ons-list-item>
+                        <ons-list-header>Found BLE devies: </ons-list-header>
+                        <div id="ble-found-devices">
+                            <ons-list-item>
+                                <em>None</em>
+                            </ons-list-item>
+                        </div>
+                    </ons-list>
+                </div>
+
+                <div class="ble-connected">
+                    <ons-list>
+                        <ons-list-item class="general">
+                            <ons-button id="disconnectDevice">Disconnect</ons-button>
+                        </ons-list-item>
+                        <ons-list-header>Connected to</ons-list-header>
+                        <ons-list-item id="ble-connected-device">None</ons-list-item>
+                    </ons-list>
+                </div>      
+            </ons-card>
+
+            <ons-card id="settingscard" style="display: none;">
+                <div class="title">
+                        Running Data
+                </div>
+                <ons-list>
+                    <ons-list-item class="input-items">
+                        <div class="left">
+                            Max BenZ:
+                        </div>
+                        <label>
+                            <ons-input id="settings-maxbenz"></ons-input>
+                        </label>
+                        <ons-button class="savebutton">Save</ons-button>
+                    </ons-list-item>
+
+                    <ons-list-item>
+                        
+                    </ons-list-item>
+                </ons-list>
+        </ons-card>
+
+        <ons-card  id="logcard" style="display: none;"> 
+            <div class="title">Logs</div>
+            <div id="logs" class="content"></div>
+        </ons-card>
+                  
+          <!--
+            <ons-tabbar swipeable position="auto">
+              <ons-tab page="home.html" label="Home" icon="md-face, material:md-home" active> </ons-tab>
+              <ons-tab page="logs.html" label="Logs" icon="ion-navicon, material:md-menu"> </ons-tab>
+              <ons-tab page="settings.html" label="Settings" icon="md-settings" ></ons-tab>
+            </ons-tabbar>
+          </ons-page>
+
+          <template id="logs.html">
+                <ons-page id="log">
+                  <ons-card>
+                    <div class="title">Logs</div>
+                    <div id="logs" class="content">
+    
+                    </div>
+                </ons-card>
+                </ons-page>
+              </template>
+          
+          <template id="settings.html">
+            <ons-page id="settings">
+                <ons-card>
+                    <div class="title">
+                        BLE Device
+                    </div>
+
+                    <div class="ble-not-connected" style="display: none;">
+                        <ons-list id="ble-devices">
+                            <ons-list-item class="general">
+                                <ons-button id="refreshDeviceList">Refresh device list</ons-button>
+                            </ons-list-item>
+                            <ons-list-header>Found BLE devies: </ons-list-header>
+                            <div id="ble-found-devices">
+                                <ons-list-item>
+                                    <em>None</em>
+                                </ons-list-item>
+                            </div>
+                        </ons-list>
+                    </div>
+
+                    <div class="ble-connected" style="display: none;">
+                        <ons-list>
+                            <ons-list-header>Connected to</ons-list-header>
+                            <ons-list-item id="ble-connected-device">None</ons-list-item>
+                            <ons-list-item class="general">
+                                <ons-button id="disconnectDevice">Disconnect</ons-button>
+                            </ons-list-item>
+                        </ons-list>
+                    </div>
+                </ons-card>
+
+                <ons-card>
+                    <div class="title">
+                            Running Data
+                    </div>
+                    <ons-list>
+                        <ons-list-item class="input-items">
+                            <div class="left">
+                                Max BenZ
+                            </div>
+                            <label class="center">
+                                <ons-input id="settings-maxbenz"></ons-input>
+                            </label>
+                        </ons-list-item>
+
+                        <ons-list-item>
+                            <ons-button class="savebutton">Save</ons-button>
+                        </ons-list-item>
+                    </ons-list>
+            </ons-card>
+            </ons-page>
+          </template>
+
+          -->
+    
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="lib/OnsenUI/js/onsenui.min.js"></script>        
+        <script type="text/javascript" src="lib/jquery/jquery-3.3.1.min.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+
+        <script type="text/javascript" src="lib/moment.min.js"></script>
+        <script type="text/javascript" src="js/debug.js"></script>
+        <script type="text/javascript" src="js/storage.js"></script>
+        <script type="text/javascript" src="js/bluetooth.js"></script>
+        <script type="text/javascript" src="js/runningdata.js"></script>
+        <script type="text/javascript" src="js/charting.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-ble-central": {
+      "PACKAGE_NAME": "be.uantwerpen.idlab"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "be.uantwerpen.idlab"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "be.uantwerpen.idlab"
+    },
+    "cordova-plugin-nano-sqlite": {
+      "PACKAGE_NAME": "be.uantwerpen.idlab"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "be.uantwerpen.idlab"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "be.uantwerpen.idlab"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ble-central": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-ble-central@^1.2.0"
+    },
+    "is_top_level": true,
+    "variables": {
+      "TEXT": "Connecting to TheBen Device"
+    }
+  },
+  "cordova-plugin-compat": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-compat@^1.2.0"
+    },
+    "is_top_level": false,
+    "variables": {}
+  },
+  "cordova-plugin-dialogs": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-dialogs@^2.0.1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
