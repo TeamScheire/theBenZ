@@ -14,4 +14,4 @@ En een screenshot van de applicatie. Deze is ontwikkeld met behulp van het [Cord
 
 ![smartlight](images/screengrab06.jpg)
 
-In de folder [hardware](./hardware) kan je de PCB en de gebruikte componenten terugvinden. In de folder [firmware](./firmware) de software voor op de sensor. en in de folder [app](./app) de code voor op de smartphone (is enkel voor Android getest).
+In de folder [hardware](./hardware) kan je de PCB en de gebruikte componenten terugvinden. In de folder [firmware](./firmware) de software voor op de sensor. En in de folder [app](./app) de code voor op de smartphone (is enkel voor Android getest).
