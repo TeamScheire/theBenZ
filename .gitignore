@@ -1,3 +1,4 @@
 .DS_Store
 *.code-workspace
 app/benviz/platforms/
+app/acc_viz/platforms/
